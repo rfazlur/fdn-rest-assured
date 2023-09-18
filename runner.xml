@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="beauty-review">
+    <listeners>
+        <listener class-name="notification.TelegramNotificationSender"/>
+    </listeners>
+
+    <test name="regression">
+        <classes>
+            <class name="runner.RegionAPI">
+                <methods>
+                    <include name="getProvince"/>
+                    <include name="getCity"/>
+                    <include name="getDistrict"/>
+                    <include name="getSubDistrict"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
